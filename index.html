@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criador de Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Criador de Senhas</h1>
+        <div class="configuracoes">
+            <label for="tamanho">Tamanho da Senha: <span id="tamanho-valor">12</span></label>
+            <input type="range" id="tamanho" min="6" max="32" value="12">
+            
+            <label><input type="checkbox" id="incluir-maiusculas" checked> Incluir Letras Maiúsculas</label>
+            <label><input type="checkbox" id="incluir-minusculas" checked> Incluir Letras Minúsculas</label>
+            <label><input type="checkbox" id="incluir-numeros" checked> Incluir Números</label>
+            <label><input type="checkbox" id="incluir-simbolos" checked> Incluir Símbolos</label>
+        </div>
+
+        <button id="gerar-senha">Gerar Senha</button>
+        
+        <div class="resultado">
+            <input type="text" id="senha-gerada" readonly>
+            <button id="copiar-senha">Copiar</button>
+        </div>
+        
+        <div class="forca-senha">
+            <label>Força da Senha:</label>
+            <div id="indicador-forca"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
